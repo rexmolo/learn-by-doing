@@ -1,5 +1,8 @@
 # Use this pattern when a task is too complex for a single prompt
-
+# Use the Routing pattern when an agent must decide between multiple distinct workflows, tools, or sub-agents 
+# based on the user's input or the current state. It is essential for applications 
+# that need to triage or classify incoming requests to handle different types of tasks, 
+# such as a customer support bot distinguishing between sales inquiries, technical support, and account management questions
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -109,3 +112,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+## notes of Google ADK version since I didn't implement it
+## InMemoryRunner
+## 
